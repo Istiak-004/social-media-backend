@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,7 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'CustomeUser_App',
+    'Post_App',
+    'Profile_App',
+    'Media_App',
+
     'djrichtextfield',
+    'ckeditor',
+    'ckeditor_uploader',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +131,12 @@ USE_TZ = True
 AUTH_USER_MODEL = 'CustomeUser_App.NewUser'
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'/static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'/media')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 DJRICHTEXTFIELD_CONFIG = {
     'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],

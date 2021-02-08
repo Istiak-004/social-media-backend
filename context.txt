@@ -1,0 +1,19 @@
+# Post_App models & fields:
+  ## Category-1.Technology
+              2.literature
+              3.Art and Artist
+              4.Life and Politics
+              5.Music and Movies
+              6.Science
+              7.Logic and philosophy
+              8.Business and Ideas
+              9.History
+
+  ## Post-
+              1. title
+              2. subtitle
+              3. author
+              4. thubmnail
+              5. slug
+              6. detail
+              7. date and time
